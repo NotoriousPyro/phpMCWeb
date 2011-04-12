@@ -1,8 +1,9 @@
 Requirements:
 * Webserver with PHP 5.2.0 or better (only apache has been tested and thus recommended).
 * Certain webhosts may disallow some functions that are required by phpMCAdmin, those webhosts are not supported
-	and will not be supported. It is recommended that you host phpMCAdmin on the same webserver that hosts the
-	Minecraft server.
+	and will not be supported.
+	It is recommended that you host phpMCAdmin on the same webserver that hosts the Minecraft server. Because
+	CPU usage, etc come from the localhost.
 * ApiCraft Bukkit plugin
 	http://forums.bukkit.org/threads/admn-web-apicraft-v0-2-web-api-system-for-craftbukkit-server-531.8783/
 
