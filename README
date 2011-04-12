@@ -1,0 +1,21 @@
+Requirements:
+* Webserver with PHP 5.2.0 or better (only apache has been tested and thus recommended).
+* Certain webhosts may disallow some functions that are required by phpMCWeb, those webhosts are not supported
+	and will not be supported.
+	It is recommended that you host phpMCWeb on the same webserver that hosts the Minecraft server. Because
+	CPU usage, etc come from the localhost.
+* ApiCraft Bukkit plugin
+	http://forums.bukkit.org/threads/admn-web-apicraft-v0-2-web-api-system-for-craftbukkit-server-531.8783/
+
+Optional:
+* Dynmap Bukkit plugin
+
+Installation:
+1: Copy the contents of the "web" directory to a public directory on your webserver.
+2: Open the file cutenews/data/users.db.php in a text editor and change the name of
+	the "Admin" user (you can change the password later).
+3: Open the file config.php and edit the two lines that read $apicraft_ip and $apicraft_port.
+4: Edit the line $dynmap to read to the url of dynmap OR if you don't want dynmap, then go into the pages folder
+	and delete the file map.phtml.
+5: Open your web browser and navigate to where you installed phpMCWeb and append cutenews onto the end.
+6: Login with the username you chose earlier and the password is admin.
