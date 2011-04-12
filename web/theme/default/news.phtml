@@ -1,0 +1,35 @@
+<?php defined("___ACCESS") or header("HTTP/1.1 403 Forbidden"); ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link href="theme/default/main.css" rel="stylesheet" type="text/css" />
+<link href="theme/default/news.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="js/main.js"></script>
+<title><?php echo _TITLESC_." - News" ?></title>
+</head>
+
+<body>
+<div class="main">
+	<div class="main_topleft"></div>
+	<div id="players" class="main_topmiddle"></div>
+	<div class="main_topright">
+		<div class="main_topright_left">CPU:</div>
+		<div id="cpu" class="main_topright_right">Loading...</div>
+		<div class="main_topright_left">Memory:</div>
+		<div id="memory" class="main_topright_right">Loading...</div>
+		<div class="main_topright_left">Uptime:</div>
+		<div id="uptime" class="main_topright_right">Loading...</div>
+	</div>
+	<div class="main_menu">
+		<div class="button" onclick="navigate('news.php')"><span>News</span></div>
+		<?php $pagehandler->GetButtons(); ?>
+	</div>
+	<div class="main_content">
+		<div id="page" class="main_content_box"><?php $number = "3"; require("cutenews/show_news.php"); ?></div>
+	</div>
+</div>
+<div class="version"><?php printf(_VERSION_, $version." by NotoriousPyro<br />\n"); printf(_LOADTIMER_, $loadtimer->GetLoadTime()); ?></div>
+</body>
+</html>

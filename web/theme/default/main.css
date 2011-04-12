@@ -1,0 +1,156 @@
+@charset "utf-8";
+/* PyBukkitWebAdmin Default theme CSS */
+
+body {
+	background-image: url('bg.png');
+	font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+	font-size: 14px;
+}
+
+div.main {
+	background-image: url('main.png');
+	width: 800px;
+	height: 750px;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	position: relative;
+	color: #FFF;
+}
+
+div.main_topleft {
+	background-image: url('top.png');
+	width: 252px;
+	height: 66px;
+	float: left;
+	margin-left: 25px;
+	margin-top: 15px;
+}
+
+div.main_topmiddle {
+	float: left;
+	width: 292px;
+	margin-top: 15px;
+	margin-left: 15px;
+}
+
+div.main_topmiddle_top {
+	font-weight: bold;
+}
+
+div.main_topright {
+	width: 175px;
+	float: right;
+	margin-top: 15px;
+	margin-right: 25px;
+	text-align: right;
+}
+
+div.main_topright_left {
+	width: 60px;
+	float: left;
+	font-weight: bold;
+}
+
+div.main_topright_right {
+	width: 105px;
+	text-align: left;
+	margin-left: 10px;
+	float: left;
+}
+
+div.main_menu {
+	text-align: center;
+	height: 50px;
+	margin-top: 123px;
+	margin-left: 25px;
+	margin-right: 25px;
+}
+
+div.button {
+	background: url('button_right.png') right no-repeat;
+	padding-right: 15px;
+	font-weight: bold;
+	text-align: center;
+	float: left;
+	cursor: pointer;
+}
+
+div.button span { 
+	background: url('button_left.png') left no-repeat;
+	padding-left: 15px;
+	line-height: 44px;
+	position: relative;
+	display: block;
+	white-space: nowrap;
+}
+div.button:hover {
+	background:url('button_righthover.png') right no-repeat;
+}
+div.button:hover span {
+	background:url('button_lefthover.png') left no-repeat;
+}
+
+div.main_content {
+	background-image: url('content.png');
+	height: 579px;
+	width: 773px;
+	margin-left: 13px;
+	margin-bottom: 14px;
+	position: absolute;
+	bottom: 0;
+}
+
+div.main_content_box {
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+div.version {
+	width: 800px;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+table.login {
+	margin-left: auto;
+	margin-right: auto;
+	width: 400px;
+	border: 0;
+	padding: 5px 5px 5px 5px;
+}
+table.login td.login_left {
+	width: 156px;
+	text-align: right;
+}
+
+p.error {
+	color: #E00;
+	text-align: center;
+	font-weight: bold;
+}
+
+a:link {
+	color: #E2E2E2;
+	text-decoration: none;
+}
+
+a:active {
+	color: #E2E2E2;
+	text-decoration: none;
+}
+
+a:visited {
+	color: #E2E2E2;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #E2E2E2;
+	text-decoration: underline;
+}
