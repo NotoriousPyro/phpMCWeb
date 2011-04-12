@@ -17,4 +17,5 @@ Installation:
 3: Open the file config.php and edit the two lines that read $apicraft_ip and $apicraft_port.
 4: Edit the line $dynmap to read to the url of dynmap OR if you don't want dynmap, then go into the pages folder
 	and delete the file map.phtml.
-4: Open your webserver and marvel :D.
+5: Open your web browser and navigate to where you installed phpMCWeb and append cutenews onto the end.
+6: Login with the username you chose earlier and the password is admin.
