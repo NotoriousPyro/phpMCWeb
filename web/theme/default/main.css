@@ -60,6 +60,10 @@ div.main_topright_right {
 	float: left;
 }
 
+img.status {
+	padding-top: 2px;
+}
+
 div.main_menu {
 	text-align: center;
 	height: 50px;

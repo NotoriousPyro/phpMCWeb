@@ -19,12 +19,8 @@ class PageHandler
 		$pages = opendir("./pages/");
 		
 		while ($file = readdir($pages))
-		{
 			if (preg_match("/.phtml$/",$file))
-			{
 				$files[] = preg_replace("/.phtml$/", "", $file);
-			}
-		}
 		
 		closedir($pages);
 		
@@ -34,14 +30,10 @@ class PageHandler
 	public function CheckPageExists()
 	{
 		if (empty($this->files))
-		{
 			header("Location: news.php");
-		}
 		
 		if (!$this->page || !in_array($this->page, $this->files))
-		{
 			header("Location: news.php");
-		}
 	}
 	
 	public function GetButtons()
@@ -49,8 +41,10 @@ class PageHandler
 		foreach ($this->files as $file => $value)
 		{
 			echo "<div class=\"button\" onclick=\"navigate('./?page=".$this->files[$file]."')\"><span>".ucfirst($this->files[$file])."</span></div>\n";
-			if (empty($this->files[$file + 1])) break;
-			else echo "\t\t";
+			if (empty($this->files[$file + 1]))
+				break;
+			else
+				echo "\t\t";
 		}
 	}
 }

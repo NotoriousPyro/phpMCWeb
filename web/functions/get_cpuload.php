@@ -99,17 +99,11 @@ class CPULoad
 		$cpu = $this->load["cpu"];
 		
 		if ($cpu <= "32.9")
-		{
 			printf("<font color=\"green\">%.1f%%</font>",$cpu);
-		}
 		else if ($cpu >= "33" && $cpu <= "65.9")
-		{
 			printf("<font color=\"orange\">%.1f%%</font>",$cpu);
-		}
 		else
-		{
 			printf("<font color=\"red\"><b>%.1f%%</b></font>",$cpu);
-		}
 	}
 	
 	function sample_load($interval=1) {

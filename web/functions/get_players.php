@@ -15,9 +15,7 @@ class PlayerList
 		$check = file_get_contents($server);
 		
 		if (empty($check))
-		{
 			return FALSE;
-		}
 		else
 		{
 			$currplayers = file_get_contents($server."serverinfos/online");
@@ -33,18 +31,11 @@ class PlayerList
 		$data = $this->GetData();
 		
 		if ($data === FALSE)
-		{
 			echo "Unknown";
-		}
 		elseif($data["currplayers"] === 0)
-		{
 			echo "0 / ".$data["maxplayers"];
-		}
 		else
-		{
-			echo nl2br("<strong>Players:</strong> ".$data["currplayers"]." / ".$data["maxplayers"]."\n"
-			.$data["playersonline"]);
-		}
+			echo nl2br("<strong>Players:</strong> ".$data["currplayers"]." / ".$data["maxplayers"]."\n".$data["playersonline"]);
 	}
 }
 

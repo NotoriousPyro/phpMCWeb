@@ -26,3 +26,5 @@ getcontent("functions/get_uptime.php", "uptime");
 autoupdate("functions/get_uptime.php", "uptime", 5);
 getcontent("functions/get_players.php", "players");
 autoupdate("functions/get_players.php", "players", 5);
+getcontent("functions/get_status.php", "status");
+autoupdate("functions/get_status.php", "status", 5);
