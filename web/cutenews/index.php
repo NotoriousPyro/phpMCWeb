@@ -42,6 +42,10 @@ if(isset($config_skin) and $config_skin != "" and file_exists("./skins/${config_
         require_once("./skins/default.skin.php");
 }
 
+// Edit by NotoriousPyro for phpMCWeb
+$config_http_script_dir = "../".$config_http_script_dir;
+// Edit by NotoriousPyro for phpMCWeb
+
 b64dck();
 if($config_use_sessions){
 @session_start();
