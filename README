@@ -16,5 +16,5 @@ Installation:
 3: Edit the line $site_url to read the full url of phpMCWeb
 4: Edit the line $dynmap to read to the url of dynmap OR if you don't want dynmap, then go into the pages folder
 	and delete the file map.phtml.
-5: Open your web browser and navigate to where you installed phpMCWeb and append cutenews onto the end.
-6: Login with the username you chose earlier and the password is admin.
+5: Open your web browser and navigate to where you installed phpMCWeb and append news onto the end.
+6: Login with admin as the username and admin as the password (change these in the settings).
