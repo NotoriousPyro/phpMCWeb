@@ -11,16 +11,16 @@ class PlayerList
 		global $apicraft_ip;
 		global $apicraft_port;
 		
-		$server = "http://".$apicraft_ip.":".$apicraft_port."/";
-		$check = file_get_contents($server);
+		$server = "http://".$apicraft_ip.":".$apicraft_port."/serverinfos/";
+		$check = @file_get_contents($server);
 		
 		if (empty($check))
 			return FALSE;
 		else
 		{
-			$currplayers = file_get_contents($server."serverinfos/online");
-			$maxplayers = file_get_contents($server."serverinfos/max-players");
-			$playersonline = preg_replace("/,/", ", ", file_get_contents($server."serverinfos/players-online"));
+			$currplayers = file_get_contents($server."online");
+			$maxplayers = file_get_contents($server."max-players");
+			$playersonline = preg_replace("/,/", ", ", file_get_contents($server."players-online"));
 			
 			return array("currplayers" => $currplayers, "maxplayers" => $maxplayers, "playersonline" => $playersonline);
 		}
