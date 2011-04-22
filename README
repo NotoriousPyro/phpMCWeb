@@ -12,9 +12,8 @@ Optional:
 
 Installation:
 1: Copy the contents of the "web" directory to a public directory on your webserver.
-2: Open the file cutenews/data/users.db.php in a text editor and change the name of
-	the "Admin" user (you can change the password later).
-3: Open the file config.php and edit the two lines that read $apicraft_ip and $apicraft_port.
+2: Open the file config.php and edit the two lines that read $apicraft_ip and $apicraft_port.
+3: Edit the line $site_url to read the full url of phpMCWeb
 4: Edit the line $dynmap to read to the url of dynmap OR if you don't want dynmap, then go into the pages folder
 	and delete the file map.phtml.
 5: Open your web browser and navigate to where you installed phpMCWeb and append cutenews onto the end.
