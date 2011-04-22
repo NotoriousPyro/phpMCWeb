@@ -29,7 +29,7 @@
 		<?php $pagehandler->GetButtons(); ?>
 	</div>
 	<div class="main_content">
-		<div id="page" class="main_content_box"><?php $number = "3"; require("cutenews/show_news.php"); ?></div>
+		<div id="page" class="main_content_box_news"><?php $fn_news_per_page = 3; include 'news/news.php'; ?></div>
 	</div>
 </div>
 <div class="version"><?php printf(_VERSION_, $version." by NotoriousPyro<br />\n"); printf(_LOADTIMER_, $loadtimer->GetLoadTime()); ?></div>

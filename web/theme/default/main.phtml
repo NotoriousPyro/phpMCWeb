@@ -9,7 +9,7 @@
 <title><?php echo _TITLESC_." - ".ucfirst($pagehandler->page); ?></title>
 </head>
 
-<body onload="javascript:getcontent('pages/<?php echo $pagehandler->page ?>.phtml', 'page')">
+<body onload="javascript:getcontent('pages/<?php echo $pagehandler->page ?>.phtml?act=<?php echo $pagehandler->act; ?>', 'page')">
 <div class="main">
 	<div class="main_topleft"></div>
 	<div id="players" class="main_topmiddle"></div>

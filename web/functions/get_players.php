@@ -31,9 +31,9 @@ class PlayerList
 		$data = $this->GetData();
 		
 		if ($data === FALSE)
-			echo "Unknown";
+			echo "<strong>Players:</strong> Unknown";
 		elseif($data["currplayers"] === 0)
-			echo "0 / ".$data["maxplayers"];
+			echo "<strong>Players:</strong> 0 / ".$data["maxplayers"];
 		else
 			echo nl2br("<strong>Players:</strong> ".$data["currplayers"]." / ".$data["maxplayers"]."\n".$data["playersonline"]);
 	}

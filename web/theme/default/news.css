@@ -1,35 +1,36 @@
 @charset "utf-8";
+/* CSS Document */
+
+div.news_powered {
+	text-align: center;
+}
 
 div.news {
+	width: 95%;
 	margin-left: auto;
 	margin-right: auto;
-	width: 700px;
-	margin-bottom:30px;
 }
 
-div.story {
-	text-align: justify;
-	padding: 3px;
-	margin-top: 3px;
-	margin-bottom: 5px;
-	border-top: 1px solid #E4E4E4;
+div.news_icon {
+	float: left;
+	padding-bottom: 3px;
+	padding-right: 3px;
 }
 
-div.comment_author {
-	border-bottom: 1px solid #D3D3D3;
+table.news_comments {
+	border-collapse: collapse;
+	border: 1px solid #DCDCDC;
+	width: 95%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-div.comment {
-	padding: 2px;
-}
-
-div.active_news_links {
-	float: right;
-}
-
-div.powered_by {
-	margin-top: 15px;
-	width: 100%;
-	text-align: center;
-	font: 9px Verdana;
+div.main_content_box_news {
+	height: 560px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+	overflow-x: hidden;
+	overflow-y: scroll;
 }
