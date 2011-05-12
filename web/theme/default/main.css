@@ -115,7 +115,7 @@ div.main_content_box {
 }
 
 div.version {
-	width: 800px;
+	width: 500px;
 	height: 50px;
 	margin-right: auto;
 	margin-left: auto;
@@ -158,4 +158,20 @@ a:visited {
 a:hover {
 	color: #E2E2E2;
 	text-decoration: underline;
+}
+
+a.op {
+	color: #C00;
+	font-weight: bold;
+}
+
+span.cpu_red {
+	color: #F00;
+	font-weight: bold;
+}
+span.cpu_amber {
+	color: #F90;
+}
+span.cpu_green {
+	color: #090;
 }

@@ -1,20 +1,17 @@
 Requirements:
 * Webserver with PHP 5.2.0 or better (only apache has been tested and thus recommended).
-* Certain webhosts may disallow some functions that are required by phpMCWeb, those webhosts are not supported
-	and will not be supported.
-	It is recommended that you host phpMCWeb on the same webserver that hosts the Minecraft server. Because
-	CPU usage, etc come from the localhost.
-* ApiCraft Bukkit plugin
-	http://forums.bukkit.org/threads/admn-web-apicraft-v0-2-web-api-system-for-craftbukkit-server-531.8783/
+* JSONAPI plugin
+	http://forums.bukkit.org/threads/admn-info-jsonapi-v1-4-1-json-http-and-socket-api-for-controlling-a-server-740.14270/
 
 Optional:
 * Dynmap Bukkit plugin
 
 Installation:
 1: Copy the contents of the "web" directory to a public directory on your webserver.
-2: Open the file config.php and edit the two lines that read $apicraft_ip and $apicraft_port.
-3: Edit the line $site_url to read the full url of phpMCWeb
-4: Edit the line $dynmap to read to the url of dynmap OR if you don't want dynmap, then go into the pages folder
-	and delete the file map.phtml.
-5: Open your web browser and navigate to where you installed phpMCWeb and append news onto the end.
-6: Login with admin as the username and admin as the password (change these in the settings).
+2: Open the file config.php and edit the lines accordingly to fit your server.
+3: For $jsonapi_salt, use saltgenerator.php included. The generated salt must be exactly
+	the same for both JSONAPI and phpMCWeb.
+4: Browse to where you installed phpMCWeb and add /news onto the end of the URL.
+5: Login to the news system and change your password. Defaults are:
+	Username: admin
+	Password: admin

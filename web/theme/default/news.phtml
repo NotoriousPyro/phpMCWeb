@@ -7,23 +7,14 @@
 <link href="theme/default/news.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
 <script type="text/javascript" src="js/main.js"></script>
-<title><?php echo _TITLESC_." - News" ?></title>
+<title><?php echo $site_name." - News"; ?></title>
 </head>
 
 <body>
 <div class="main">
 	<div class="main_topleft"></div>
 	<div id="players" class="main_topmiddle"></div>
-	<div class="main_topright">
-		<div class="main_topright_left">CPU:</div>
-		<div id="cpu" class="main_topright_right">Loading...</div>
-		<div class="main_topright_left">Memory:</div>
-		<div id="memory" class="main_topright_right">Loading...</div>
-		<div class="main_topright_left">Uptime:</div>
-		<div id="uptime" class="main_topright_right">Loading...</div>
-		<div class="main_topright_left">Status:</div>
-		<div id="status" class="main_topright_right">Loading...</div>
-	</div>
+	<div id="basicinfo" class="main_topright"></div>
 	<div class="main_menu">
 		<div class="button" onclick="navigate('news.php')"><span>News</span></div>
 		<?php $pagehandler->GetButtons(); ?>

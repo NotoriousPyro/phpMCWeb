@@ -4,7 +4,8 @@
 defined("___ACCESS") or define("___ACCESS", TRUE);
 @include_once("../config.php") or require_once("config.php");
 
-if (!isset($site_url)) $site_url = __FILE__;
+if (substr($site_url, -1) !== "/")
+	$site_url = $site_url."/";
 $site = $site_url;
 $furl = $site_url."news";
 $hurl = $site_url."news.php";

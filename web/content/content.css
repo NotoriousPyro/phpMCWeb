@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+div.inventory {
+	background-image: url('inventory.png');
+	width: 352px;
+	height: 332px;
+	margin-top: auto;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	position: relative;
+	color: #FFF;
+}
+
+div.armour_area {
+	height: 132px;
+	width: 33px;
+	margin-left: 12px;
+	margin-top: 12px;
+	position: absolute;
+	top: 0;
+	display: block;
+}
+
+div.inventory_area {
+	height: 99px;
+	width: 324px;
+	margin-left: 12px;
+	margin-bottom: 69px;
+	position: absolute;
+	bottom: 0;
+}
+
+div.inventory_area_bottom {
+	height: 33px;
+	width: 324px;
+	margin-left: 12px;
+	margin-bottom: 19px;
+	position: absolute;
+	bottom: 0;
+}
+
+div.item {
+	height: 33px;
+	width: 33px; 
+	margin-left: 3px;
+	margin-top: 3px;
+	float: left;
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+div.item_count {
+	font-weight: bold;
+	float: right;
+	margin-top: 17px;
+	margin-right: 1px;
+}
+
+img.item {
+	height: 33px;
+	width: 33px;
+	margin-left: 3px;
+	margin-top: 3px;
+}

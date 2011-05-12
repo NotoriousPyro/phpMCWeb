@@ -2,44 +2,43 @@
 
 define("___ACCESS", TRUE);
 
-require("../config.php");
+require("../includes.php");
+require("../inc/jsonapi.php");
 
-class PlayerList
+$api = new JSONAPI($jsonapi_ip, $jsonapi_port, $jsonapi_username, $jsonapi_password, $jsonapi_salt);
+
+$data = $api->callMultiple(array(
+		"getPlayerCount",
+		"getPlayerLimit",
+		"getPlayers",
+		), array(
+		array(),
+		array(),
+		array()
+		));
+
+$playercount = $data["success"][0]["success"];
+$playerlimit = $data["success"][1]["success"];
+$players = array($data["success"][2]["success"]);
+
+foreach ($players[0] as $player => $value)
 {
-	private function GetData()
+	$name = $players[0][$player]["name"];
+	if ($players[0][$player]["op"] === TRUE)
 	{
-		global $apicraft_ip;
-		global $apicraft_port;
-		
-		$server = "http://".$apicraft_ip.":".$apicraft_port."/serverinfos/";
-		$check = @file_get_contents($server);
-		
-		if (empty($check))
-			return FALSE;
-		else
-		{
-			$currplayers = file_get_contents($server."online");
-			$maxplayers = file_get_contents($server."max-players");
-			$playersonline = preg_replace("/,/", ", ", file_get_contents($server."players-online"));
-			
-			return array("currplayers" => $currplayers, "maxplayers" => $maxplayers, "playersonline" => $playersonline);
-		}
+		$playerlist = $playerlist."<a class=\"op\" href=\"javascript:popup('functions/get_player.php?player=".$name."','playerinfo','700','500')\">".$name."</a>";
 	}
-	
-	public function DisplayData()
+	else
 	{
-		$data = $this->GetData();
-		
-		if ($data === FALSE)
-			echo "<strong>Players:</strong> Unknown";
-		elseif($data["currplayers"] === 0)
-			echo "<strong>Players:</strong> 0 / ".$data["maxplayers"];
-		else
-			echo nl2br("<strong>Players:</strong> ".$data["currplayers"]." / ".$data["maxplayers"]."\n".$data["playersonline"]);
+		$playerlist = $playerlist."<a href=\"javascript:popup('functions/get_player.php?player=".$name."','playerinfo','700','500')\">".$name."</a>";
+	}
+	if (!empty($players[0][$player + 1]))
+	{
+		$playerlist = $playerlist.", ";
 	}
 }
 
-$playerlist = new PlayerList();
-$playerlist->DisplayData();
+echo "<strong>"._PLAYERS_.":</strong> ";
+echo nl2br($playercount." / ".$playerlimit."\n".$playerlist);
 
 ?>
