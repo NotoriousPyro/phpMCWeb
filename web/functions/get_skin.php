@@ -14,11 +14,14 @@ try
 	if (!file_exists($player_original) || time() - filemtime($player_original) > $minupdate)
 	{
 		$headers = get_headers($imageurl);
-		if ($headers[16] != "HTTP/1.1 200 OK")
+		if ($headers[16] == "HTTP/1.1 200 OK")
 		{
-			throw new Exception("Player does not exist!");
+			file_put_contents($player_original, file_get_contents($imageurl));
 		}
-		file_put_contents($player_original, file_get_contents($imageurl));
+		else
+		{
+			file_put_contents($player_original, file_get_contents("http://www.minecraft.net/img/char.png"));
+		}
 	}
 	
 	if (!file_exists($player_generated) || time() - filemtime($player_generated) > $minupdate)
@@ -27,9 +30,16 @@ try
 		$height = 124;
 		
 		$generated = imagecreatetruecolor($width, $height);
+		
+		if (!$generated)
+		{
+			throw new Exception("Error generating image.");
+		}
+		
 		imagesavealpha($generated, TRUE);
 		$alpha = imagecolorallocatealpha($generated, 0, 0, 0, 127);
 		imagefill($generated, 0, 0, $alpha);
+		
 		$original = imagecreatefrompng($player_original);
 		
 		if (!$original)
