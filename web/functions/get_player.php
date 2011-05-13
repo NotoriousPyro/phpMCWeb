@@ -76,6 +76,7 @@ if (!isset($error))
 
 ?>
 	</div>
+	<img class="player" src="get_skin.php?player=<?php echo $player; ?>" />
 	<div class="inventory_area">
 <?php
 if (!isset($error))
