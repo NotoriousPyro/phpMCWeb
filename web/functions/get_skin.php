@@ -14,14 +14,11 @@ try
 	if (!file_exists($player_original) || time() - filemtime($player_original) > $minupdate)
 	{
 		$headers = get_headers($imageurl);
-		if ($headers[16] == "HTTP/1.1 200 OK")
+		if ($headers[16] != "HTTP/1.1 200 OK")
 		{
-			file_put_contents($player_original, file_get_contents($imageurl));
+			$imageurl = "http://www.minecraft.net/img/char.png";
 		}
-		else
-		{
-			file_put_contents($player_original, file_get_contents("http://www.minecraft.net/img/char.png"));
-		}
+		file_put_contents($player_original, file_get_contents($imageurl));
 	}
 	
 	if (!file_exists($player_generated) || time() - filemtime($player_generated) > $minupdate)
@@ -60,11 +57,11 @@ try
 		imagecopy($generated, $generated, 36, 76, 24, 76, 4, 48);
 		imagecopy($generated, $generated, 32, 76, 28, 76, 4, 48);
 		
-		imagepng($generated, $savepath.$player."_generated.png");
+		imagepng($generated, $player_generated);
 		imagedestroy($generated);
 	}
 	
-	$display = imagecreatefrompng($savepath.$player."_generated.png");
+	$display = imagecreatefrompng($player_generated);
 	imagesavealpha($display, TRUE);
 	
 	header("Content-type: image/png");
