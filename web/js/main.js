@@ -32,8 +32,3 @@ function popup(url,name,width,height)
 	newwin=window.open(url,'fp_'+name, params);
 	if (window.focus) {newwin.focus()}
 }
-
-getcontent("functions/get_basicinfo.php", "basicinfo");
-autoupdate("functions/get_basicinfo.php", "basicinfo", 10);
-getcontent("functions/get_players.php", "players");
-autoupdate("functions/get_players.php", "players", 5);

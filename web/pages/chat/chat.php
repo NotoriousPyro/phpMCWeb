@@ -10,22 +10,8 @@ body,td,th {
 }
 </style>
 <script type="text/javascript" src="http://code.jquery.com/jquery-1.5.2.min.js"></script>
+<script type="text/javascript" src="../../js/main.js"></script>
 <script type="text/javascript">
-function getcontent(page,div)
-{
-	$.get(page, function(data) {
-		$("#"+div).html(data);
-	});
-}
-
-function autoupdate(page,div,delay)
-{
-	var auto_refresh = setInterval(function()
-	{
-		$("#"+div).load(page);
-	}, delay * 1000);
-}
-
 getcontent("content.php", "chat");
 autoupdate("content.php", "chat", 5);
 </script>

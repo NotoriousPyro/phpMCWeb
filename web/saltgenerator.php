@@ -28,6 +28,8 @@ if ($password != "" && strlen($password) >= 8)
 {
 	$key = GenerateKey();
 	
-	echo "Salt: ".crypt($password, "$5$rounds=5000$".$key."$");
+	echo "Salt: ".crypt($password, "$5$rounds=".rand(1000, 999999)."$".$key."$");
 }
 echo "</pre>";
+
+?>

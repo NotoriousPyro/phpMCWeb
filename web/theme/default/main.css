@@ -164,14 +164,3 @@ a.op {
 	color: #C00;
 	font-weight: bold;
 }
-
-span.cpu_red {
-	color: #F00;
-	font-weight: bold;
-}
-span.cpu_amber {
-	color: #F90;
-}
-span.cpu_green {
-	color: #090;
-}

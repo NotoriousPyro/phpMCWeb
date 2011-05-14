@@ -77,6 +77,22 @@ if (!isset($error))
 ?>
 	</div>
 	<img class="player" src="get_skin.php?player=<?php echo $player; ?>" />
+	<div class="healtbar"><?php
+	$data_health = $data["success"]["health"];
+	
+	for ($i = 0; $i < $data_health; $i=$i + 2)
+	{
+		if ($i + 1 === $data_health)
+		{
+			echo "<img class=\"healthpip\" src=\"../content/halfpip.png\" />";
+		}
+		else
+		{
+			echo "<img class=\"healthpip\" src=\"../content/fullpip.png\" />";
+		}
+	}
+	
+	?></div>
 	<div class="inventory_area">
 <?php
 if (!isset($error))

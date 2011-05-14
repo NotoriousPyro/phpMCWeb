@@ -23,11 +23,11 @@ try
 		$headers = get_headers($imageurl);
 		if ($headers[16] != "HTTP/1.1 200 OK")
 		{
-			$imageurl = "http://www.minecraft.net/img/char.png";
+			$imageurl = "http://minecraft.net/img/char.png";
 		}
 		if (!file_put_contents($player_original, file_get_contents($imageurl)))
 		{
-			throw new Exception("Error retrieiving/saving Minecraft skin");
+			throw new Exception("Error retrieving/saving Minecraft skin");
 		}
 	}
 	

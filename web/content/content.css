@@ -14,8 +14,8 @@ div.inventory {
 }
 
 div.armour_area {
-	height: 132px;
-	width: 33px;
+	height: 144px;
+	width: 32px;
 	margin-left: 12px;
 	margin-top: 12px;
 	position: absolute;
@@ -24,28 +24,28 @@ div.armour_area {
 }
 
 div.inventory_area {
-	height: 99px;
+	height: 108px;
 	width: 324px;
 	margin-left: 12px;
-	margin-bottom: 69px;
+	margin-bottom: 60px;
 	position: absolute;
 	bottom: 0;
 }
 
 div.inventory_area_bottom {
-	height: 33px;
+	height: 32px;
 	width: 324px;
 	margin-left: 12px;
-	margin-bottom: 19px;
+	margin-bottom: 20px;
 	position: absolute;
 	bottom: 0;
 }
 
 div.item {
-	height: 33px;
-	width: 33px; 
-	margin-left: 3px;
-	margin-top: 3px;
+	height: 32px;
+	width: 32px; 
+	margin-left: 4px;
+	margin-top: 4px;
 	float: left;
 	background-repeat: no-repeat;
 	background-position: center;
@@ -56,6 +56,26 @@ div.item_count {
 	float: right;
 	margin-top: 17px;
 	margin-right: 1px;
+}
+
+div.healtbar {
+	background-image: url('healthbar.png');
+	background-repeat: no-repeat;
+	height: 16px;
+	width: 169px;
+	position: absolute;
+	top: 0;
+	margin-top: 12px;
+	margin-left: 168px;
+	padding-left: 2px;
+	padding-top: 1px;
+}
+
+img.healthpip {
+	height: 12px;
+	width: 12px;
+	margin-right: 5px;
+	margin-top: 1px;
 }
 
 img.player {
