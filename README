@@ -8,10 +8,11 @@ Optional:
 
 Installation:
 1: Copy the contents of the "web" directory to a public directory on your webserver.
-2: Open the file config.php and edit the lines accordingly to fit your server.
-3: For $jsonapi_salt, use saltgenerator.php included. The generated salt must be exactly
+2: On *nix systems, ensure that content/players folder is chmodded to 0777.
+3: Open the file config.php and edit the lines accordingly to fit your server.
+4: For $jsonapi_salt, use saltgenerator.php included. The generated salt must be exactly
 	the same for both JSONAPI and phpMCWeb.
-4: Browse to where you installed phpMCWeb and add /news onto the end of the URL.
-5: Login to the news system and change your password. Defaults are:
+5: Browse to where you installed phpMCWeb and add /news onto the end of the URL.
+6: Login to the news system and change your password. Defaults are:
 	Username: admin
 	Password: admin
