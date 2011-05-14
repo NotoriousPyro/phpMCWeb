@@ -11,6 +11,13 @@ $player_generated = $savepath.$player."_generated.png";
 
 try
 {
+	if (substr(vsprintf("%o", fileperms($savepath)), -4) != "0777")
+	{
+		if (!chmod($savepath, 0777))
+		{
+			throw new Exception("Permissions error");
+		}
+	}
 	if (!file_exists($player_original) || time() - filemtime($player_original) > $minupdate)
 	{
 		$headers = get_headers($imageurl);
@@ -18,7 +25,10 @@ try
 		{
 			$imageurl = "http://www.minecraft.net/img/char.png";
 		}
-		file_put_contents($player_original, file_get_contents($imageurl));
+		if (!file_put_contents($player_original, file_get_contents($imageurl)))
+		{
+			throw new Exception("Error retrieiving/saving Minecraft skin");
+		}
 	}
 	
 	if (!file_exists($player_generated) || time() - filemtime($player_generated) > $minupdate)
@@ -45,6 +55,7 @@ try
 		}
 		
 		imagecopyresized($generated, $original, 16, 0, 7, 8, 32, 28, 10, 8);
+		imagecopyresized($generated, $original, 16, 0, 39, 8, 32, 28, 10, 8);
 		imagecopyresized($generated, $original, 0, 28, 44, 20, 16, 48, 4, 12);
 		imagecopyresized($generated, $original, 16, 28, 20, 20, 32, 48, 8, 12);
 		imagecopyresized($generated, $original, 16, 76, 4, 20, 16, 48, 4, 12);
