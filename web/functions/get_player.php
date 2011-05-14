@@ -79,18 +79,21 @@ if (!isset($error))
 	<img class="player" src="get_skin.php?player=<?php echo $player; ?>" />
 	<div class="healtbar"><?php
 	$data_health = $data["success"]["health"];
-	
-	for ($i = 0; $i < $data_health; $i=$i + 2)
+	echo "\n\t\t";
+	$i = 0;
+	do
 	{
-		if ($i + 1 === $data_health)
+		if ($data_health === $i + 1)
 		{
 			echo "<img class=\"healthpip\" src=\"../content/halfpip.png\" />";
+			break;
 		}
 		else
 		{
 			echo "<img class=\"healthpip\" src=\"../content/fullpip.png\" />";
 		}
-	}
+		$i = $i + 2;
+	} while ($i < $data_health);
 	
 	?></div>
 	<div class="inventory_area">
