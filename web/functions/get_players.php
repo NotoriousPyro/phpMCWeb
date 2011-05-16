@@ -1,5 +1,20 @@
 <?php
 
+/**
+ * This file is part of phpMCWeb.
+ * phpMCWeb is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * phpMCWeb is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU General Public License
+ * along with phpMCWeb. If not, see <http://www.gnu.org/licenses/>.
+ */
+
 define("___ACCESS", TRUE);
 
 require("../includes.php");
@@ -21,24 +36,32 @@ $playercount = $data["success"][0]["success"];
 $playerlimit = $data["success"][1]["success"];
 $players = array($data["success"][2]["success"]);
 
-foreach ($players[0] as $player => $value)
+if ($data["result"] !== "success")
 {
-	$name = $players[0][$player]["name"];
-	if ($players[0][$player]["op"] === TRUE)
+	$playercount = "?";
+	$playerlimit = "?";
+}
+else
+{
+	foreach ($players[0] as $player => $value)
 	{
-		$playerlist = $playerlist."<a class=\"op\" href=\"javascript:popup('functions/get_player.php?player=".$name."','playerinfo','700','500')\">".$name."</a>";
-	}
-	else
-	{
-		$playerlist = $playerlist."<a href=\"javascript:popup('functions/get_player.php?player=".$name."','playerinfo','700','500')\">".$name."</a>";
-	}
-	if (!empty($players[0][$player + 1]))
-	{
-		$playerlist = $playerlist.", ";
+		$name = $players[0][$player]["name"];
+		if ($players[0][$player]["op"] === TRUE)
+		{
+			$playerlist = $playerlist."<a class=\"op\" href=\"javascript:popup('functions/get_player.php?player=".$name."','playerinfo','700','500')\">".$name."</a>";
+		}
+		else
+		{
+			$playerlist = $playerlist."<a href=\"javascript:popup('functions/get_player.php?player=".$name."','playerinfo','700','500')\">".$name."</a>";
+		}
+		if (!empty($players[0][$player + 1]))
+		{
+			$playerlist = $playerlist.", ";
+		}
 	}
 }
 
-echo "<strong>"._PLAYERS_.":</strong> ";
+echo "<strong>".$phpmc["MAIN"]["PLAYERS"]."</strong> ";
 echo nl2br($playercount." / ".$playerlimit."\n".$playerlist);
 
 ?>

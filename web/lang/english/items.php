@@ -1,6 +1,21 @@
 <?php
 
-$lang_items = array(
+/**
+ * This file is part of phpMCWeb.
+ * phpMCWeb is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * phpMCWeb is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU General Public License
+ * along with phpMCWeb. If not, see <http://www.gnu.org/licenses/>.
+ */
+
+$phpmc["ITEMS"] = array(
 	// Blocks
 	1		=> "Stone",
 	2		=> "Grass",
@@ -38,8 +53,8 @@ $lang_items = array(
 	40		=> "Red Mushroom",
 	41		=> "Gold Block",
 	42		=> "Iron Block",
-	43		=> "Double Slabs",
-	44		=> "Slabs",
+	43		=> "Double Slab",
+	44		=> "Slab",
 	45		=> "Brick Block",
 	46		=> "TNT",
 	47		=> "Bookshelf",

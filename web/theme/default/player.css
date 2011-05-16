@@ -1,5 +1,18 @@
 @charset "utf-8";
-/* CSS Document */
+/**
+ * This file is part of phpMCWeb.
+ * phpMCWeb is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * phpMCWeb is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
+ * GNU General Public License for more details.
+
+ * You should have received a copy of the GNU General Public License
+ * along with phpMCWeb. If not, see <http://www.gnu.org/licenses/>.
+ */
 
 div.inventory {
 	background-image: url('inventory.png');
@@ -62,11 +75,11 @@ div.healtbar {
 	background-image: url('healthbar.png');
 	background-repeat: no-repeat;
 	height: 16px;
-	width: 169px;
+	width: 170px;
 	position: absolute;
 	top: 0;
 	margin-top: 12px;
-	margin-left: 168px;
+	margin-left: 173px;
 	padding-left: 2px;
 	padding-top: 1px;
 }
@@ -74,13 +87,13 @@ div.healtbar {
 img.healthpip {
 	height: 12px;
 	width: 12px;
-	margin-right: 5px;
+	margin-right: 4px;
 	margin-top: 1px;
 }
 
 img.player {
 	height: 124px;
 	width: 64px;
-	margin-left: 70px;
+	margin-left: 71px;
 	margin-top: 24px;
 }
