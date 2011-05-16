@@ -20,15 +20,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 <style type="text/css">
-body,td,th {
+body,td,th 
+{
 	font-family: "Lucida Console", Monaco, monospace;
 	font-size: 11px;
 }
 </style>
 </head>
 
-<body>
-<?php
+<body><?php
 
 define("___ACCESS", TRUE);
 
@@ -47,6 +47,5 @@ foreach ($data as $message => $value)
 	echo "<div style=\"width: 75%; float: left;\">".$data[$message]["message"]."</div>\n";
 }
 
-?>
-</body>
+?></body>
 </html>
