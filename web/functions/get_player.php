@@ -79,14 +79,14 @@ function HandleError(error)
 if (!isset($error))
 {
 	$data_armour = $data["success"]["inventory"]["armor"];
-	echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["helmet"]["type"]]
-	."\" class=\"item\" style=\"background-image: url('../theme/".$theme."/items/".$data_armour["helmet"]["type"].".png');\"></div>\n";
-	echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["chestplate"]["type"]]
-	."\" class=\"item\" style=\"background-image: url('../theme/".$theme."/items/".$data_armour["chestplate"]["type"].".png');\"></div>\n";
-	echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["leggings"]["type"]]
-	."\" class=\"item\" style=\"background-image: url('../theme/".$theme."/items/".$data_armour["leggings"]["type"].".png');\"></div>\n";
-	echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["boots"]["type"]]
-	."\" class=\"item\" style=\"background-image: url('../theme/".$theme."/items/".$data_armour["boots"]["type"].".png');\"></div>\n";
+	echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["helmet"]["type"]]."\" class=\"item\" "
+	."style=\"background-image: url('../theme/".$theme."/items/".$data_armour["helmet"]["type"].".png');\"></div>\n"
+	."\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["chestplate"]["type"]]."\" class=\"item\" "
+	."style=\"background-image: url('../theme/".$theme."/items/".$data_armour["chestplate"]["type"].".png');\"></div>\n"
+	."\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["leggings"]["type"]]."\" class=\"item\" "
+	."style=\"background-image: url('../theme/".$theme."/items/".$data_armour["leggings"]["type"].".png');\"></div>\n"
+	."\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["boots"]["type"]]."\" class=\"item\" "
+	."style=\"background-image: url('../theme/".$theme."/items/".$data_armour["boots"]["type"].".png');\"></div>\n";
 }
 
 ?>
@@ -118,8 +118,8 @@ if (!isset($error))
 	$data_inventory = $data["success"]["inventory"]["inventory"];
 	foreach ($data_inventory as $item => $value)
 	{
-		echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_inventory[$item + 9]["type"]]
-		."\" class=\"item\" style=\"background-image: url('../theme/".$theme."/items/".$data_inventory[$item + 9]["type"].".png');\">";
+		echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_inventory[$item + 9]["type"]]."\" class=\"item\" "
+		."style=\"background-image: url('../theme/".$theme."/items/".$data_inventory[$item + 9]["type"].".png');\">";
 		if ($data_inventory[$item + 9]["amount"] > 1)
 		{
 			echo "<div class=\"item_count\">".$data_inventory[$item + 9]["amount"]."</div>";
@@ -137,8 +137,8 @@ if (!isset($error))
 {
 	foreach ($data_inventory as $item => $value)
 	{
-		echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_inventory[$item]["type"]]
-		."\" class=\"item\" style=\"background-image: url('../theme/".$theme."/items/".$data_inventory[$item]["type"].".png');\">";
+		echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_inventory[$item]["type"]]."\" class=\"item\" "
+		."style=\"background-image: url('../theme/".$theme."/items/".$data_inventory[$item]["type"].".png');\">";
 		if ($data_inventory[$item]["amount"] > 1)
 		{
 			echo "<div class=\"item_count\">".$data_inventory[$item]["amount"]."</div>";

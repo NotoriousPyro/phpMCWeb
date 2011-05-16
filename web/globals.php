@@ -17,7 +17,7 @@
 
 defined("___ACCESS") or header("HTTP/1.1 403 Forbidden");
 
-$version = "0.8.0";
+$version = "0.8.1";
 
 // Please do not edit this line, if you wish to help develop phpMCWeb
 // then please get in touch with me at craigcrawford1988 AT gmail DOT com

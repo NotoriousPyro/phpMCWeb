@@ -52,8 +52,8 @@ $memtotal = sprintf($phpmc["MAIN"]["MEM_TOTAL"], $memtotal);
 $memformat = nl2br($memusage."\n".$memfree."\n".$memtotal);
 
 echo "<div class=\"main_topright_left\">Memory:</div>
-		<div id=\"memory\" class=\"main_topright_right\">".$memformat."</div>"
-		."<div class=\"main_topright_left\">Status:</div>
+		<div id=\"memory\" class=\"main_topright_right\">".$memformat."</div>
+		<div class=\"main_topright_left\">Status:</div>
 		<div id=\"status\" class=\"main_topright_right\"><img class=\"status\" src=\"".$status."\" /></div>";
 
 ?>

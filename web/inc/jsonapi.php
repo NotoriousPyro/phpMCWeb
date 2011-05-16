@@ -87,11 +87,11 @@ class JSONAPI {
 			$this->callMultiple($method, $args);
 		}
 	
-		foreach((array)$args as $k => $v) {
+		/*foreach((array)$args as $k => $v) {
 			if(is_numeric($v)) {
 				$args[$k] = (float)$v;
 			}
-		}
+		}*/
 		
 		$url = $this->makeURL($method, $args);
 
@@ -121,13 +121,13 @@ class JSONAPI {
 			throw new Exception("The length of the arrays \$methods and \$args are different! You need an array of arguments for each method!");
 		}
 	
-		foreach((array)$args as $key => $v) {
+		/*foreach((array)$args as $key => $v) {
 			foreach((array)$v as $k => $x) {
 				if(is_numeric($x)) {
 					$args[$key][$k] = (float)$x;
 				}
 			}
-		}
+		}*/
 		
 		$url = $this->makeURLMultiple($methods, $args);
 

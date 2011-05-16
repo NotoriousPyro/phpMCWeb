@@ -61,7 +61,7 @@ else
 	}
 }
 
-echo "<strong>".$phpmc["MAIN"]["PLAYERS"]."</strong> ";
-echo nl2br($playercount." / ".$playerlimit."\n".$playerlist);
+echo nl2br("<strong>".$phpmc["MAIN"]["PLAYERS"]."</strong> "
+	.$playercount." / ".$playerlimit."\n".$playerlist);
 
 ?>
