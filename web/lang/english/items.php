@@ -46,6 +46,8 @@ $phpmc["ITEMS"] = array(
 	27		=> "Powered Rail",
 	28		=> "Detector Rail",
 	30		=> "Web",
+	31		=> "Tall Grass",
+	32		=> "Dead Shrub",
 	35		=> "Wool",
 	37		=> "Dandelion",
 	38		=> "Rose",
@@ -106,6 +108,7 @@ $phpmc["ITEMS"] = array(
 	93		=> "Redstone Reapeater",
 	94		=> "Redstone Reapeater",
 	//95	=> "Locked Chest",
+	96		=> "Trap Door",
 	
 	// Items
 	256		=> "Iron Shovel",
@@ -210,6 +213,7 @@ $phpmc["ITEMS"] = array(
 	355		=> "Bed",
 	356		=> "Redstone Repeater",
 	357		=> "Cookie",
+	358		=> "Map",
 	2256	=> "Gold Music Disc",
 	2257	=> "Green Music Disc",
 );

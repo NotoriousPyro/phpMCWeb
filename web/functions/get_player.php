@@ -73,26 +73,26 @@ function HandleError(error)
 
 <body onload="HandleError('<?php echo $error; ?>')">
 <div class="inventory">
-	<div class="armour_area">
+	<div id="armour">
 <?php
 
 if (!isset($error))
 {
 	$data_armour = $data["success"]["inventory"]["armor"];
-	echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["helmet"]["type"]]."\" class=\"item\" "
+	echo "\t\t<div id=\"item\" title=\"".$phpmc["ITEMS"][$data_armour["helmet"]["type"]]."\" "
 	."style=\"background-image: url('../theme/".$theme."/items/".$data_armour["helmet"]["type"].".png');\"></div>\n"
-	."\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["chestplate"]["type"]]."\" class=\"item\" "
+	."\t\t<div id=\"item\" title=\"".$phpmc["ITEMS"][$data_armour["chestplate"]["type"]]."\" "
 	."style=\"background-image: url('../theme/".$theme."/items/".$data_armour["chestplate"]["type"].".png');\"></div>\n"
-	."\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["leggings"]["type"]]."\" class=\"item\" "
+	."\t\t<div id=\"item\" title=\"".$phpmc["ITEMS"][$data_armour["leggings"]["type"]]."\" "
 	."style=\"background-image: url('../theme/".$theme."/items/".$data_armour["leggings"]["type"].".png');\"></div>\n"
-	."\t\t<div title=\"".$phpmc["ITEMS"][$data_armour["boots"]["type"]]."\" class=\"item\" "
+	."\t\t<div id=\"item\" title=\"".$phpmc["ITEMS"][$data_armour["boots"]["type"]]."\" "
 	."style=\"background-image: url('../theme/".$theme."/items/".$data_armour["boots"]["type"].".png');\"></div>\n";
 }
 
 ?>
 	</div>
 	<img class="player" src="get_skin.php?player=<?php echo $player; ?>" />
-	<div class="healtbar"><?php
+	<div id="health"><?php
 	$data_health = $data["success"]["health"];
 	echo "\n\t\t";
 	$i = 0;
@@ -100,29 +100,29 @@ if (!isset($error))
 	{
 		if ($data_health === $i + 1)
 		{
-			echo "<img class=\"healthpip\" src=\"../theme/".$theme."/halfpip.png\" />";
+			echo "<img id=\"pip\" src=\"../theme/".$theme."/halfpip.png\" />";
 			break;
 		}
 		else
 		{
-			echo "<img class=\"healthpip\" src=\"../theme/".$theme."/fullpip.png\" />";
+			echo "<img id=\"pip\" src=\"../theme/".$theme."/fullpip.png\" />";
 		}
 		$i = $i + 2;
 	} while ($i < $data_health);
 	
 	?></div>
-	<div class="inventory_area">
+	<div id="top">
 <?php
 if (!isset($error))
 {
 	$data_inventory = $data["success"]["inventory"]["inventory"];
 	foreach ($data_inventory as $item => $value)
 	{
-		echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_inventory[$item + 9]["type"]]."\" class=\"item\" "
+		echo "\t\t<div id=\"item\" title=\"".$phpmc["ITEMS"][$data_inventory[$item + 9]["type"]]."\" "
 		."style=\"background-image: url('../theme/".$theme."/items/".$data_inventory[$item + 9]["type"].".png');\">";
 		if ($data_inventory[$item + 9]["amount"] > 1)
 		{
-			echo "<div class=\"item_count\">".$data_inventory[$item + 9]["amount"]."</div>";
+			echo "<div id=\"count\">".$data_inventory[$item + 9]["amount"]."</div>";
 		}
 		echo "</div>\n";
 		if ($item === 26)
@@ -131,17 +131,17 @@ if (!isset($error))
 }
 ?>
 	</div>
-	<div class="inventory_area_bottom">
+	<div id="bottom">
 <?php
 if (!isset($error))
 {
 	foreach ($data_inventory as $item => $value)
 	{
-		echo "\t\t<div title=\"".$phpmc["ITEMS"][$data_inventory[$item]["type"]]."\" class=\"item\" "
+		echo "\t\t<div id=\"item\" title=\"".$phpmc["ITEMS"][$data_inventory[$item]["type"]]."\" "
 		."style=\"background-image: url('../theme/".$theme."/items/".$data_inventory[$item]["type"].".png');\">";
 		if ($data_inventory[$item]["amount"] > 1)
 		{
-			echo "<div class=\"item_count\">".$data_inventory[$item]["amount"]."</div>";
+			echo "<div id=\"count\">".$data_inventory[$item]["amount"]."</div>";
 		}
 		echo "</div>\n";
 		if ($item === 8)

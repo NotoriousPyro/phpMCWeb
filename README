@@ -7,11 +7,11 @@ Optional:
 * Dynmap Bukkit plugin
 
 Installation:
-phpMCWeb 0.8.0 is not compatible with previous versions of phpMCWeb, please DELETE
-your previous installation first and then follow this installation guide.
+Before starting, please delete the existing phpMCWeb installation. There is no easy
+upgrade option at this time.
 1: Copy the contents of the "web" directory to a public directory on your webserver.
 2: On *nix systems, ensure that the cache folder, news folder and subdirectories
-	of those folders are chmodded to 0777 (or parts of phpMCWeb will NOT work).
+	of those folders are chmodded to 0777 (or parts of phpMCWeb will NOT work properly).
 3: Open the file config.php and edit the lines accordingly to fit your server.
 4: For $jsonapi_salt, use saltgenerator.php included. The generated salt must be exactly
 	the same for both JSONAPI and phpMCWeb.

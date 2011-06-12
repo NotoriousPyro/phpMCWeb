@@ -16,62 +16,54 @@
 
 div.inventory {
 	background-image: url('inventory.png');
-	width: 352px;
 	height: 332px;
+	width: 352px;
 	margin-top: auto;
 	margin-left: auto;
 	margin-right: auto;
-	overflow: hidden;
 	position: relative;
 	color: #FFF;
 }
 
-div.armour_area {
+div.inventory #armour {
 	height: 144px;
 	width: 32px;
 	margin-left: 12px;
 	margin-top: 12px;
 	position: absolute;
-	top: 0;
-	display: block;
 }
 
-div.inventory_area {
+div.inventory #top {
 	height: 108px;
 	width: 324px;
 	margin-left: 12px;
-	margin-bottom: 60px;
-	position: absolute;
-	bottom: 0;
+	margin-top: 16px;
 }
 
-div.inventory_area_bottom {
+div.inventory #bottom {
 	height: 32px;
 	width: 324px;
 	margin-left: 12px;
-	margin-bottom: 20px;
-	position: absolute;
-	bottom: 0;
+	margin-top: 8px;
 }
 
-div.item {
+div.inventory #item {
 	height: 32px;
 	width: 32px; 
 	margin-left: 4px;
 	margin-top: 4px;
 	float: left;
-	background-repeat: no-repeat;
 	background-position: center;
 }
 
-div.item_count {
+div.inventory #item #count {
 	font-weight: bold;
 	float: right;
 	margin-top: 17px;
 	margin-right: 1px;
 }
 
-div.healtbar {
+div.inventory #health {
 	background-image: url('healthbar.png');
 	background-repeat: no-repeat;
 	height: 16px;
@@ -84,7 +76,7 @@ div.healtbar {
 	padding-top: 1px;
 }
 
-img.healthpip {
+div.inventory #pip {
 	height: 12px;
 	width: 12px;
 	margin-right: 4px;

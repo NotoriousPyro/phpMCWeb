@@ -30,7 +30,7 @@ $data = $api->callMultiple(array(
 		array(),
 		array(),
 		array()
-		));
+	));
 
 $playercount = $data["success"][0]["success"];
 $playerlimit = $data["success"][1]["success"];
@@ -48,7 +48,7 @@ else
 		$name = $players[0][$player]["name"];
 		if ($players[0][$player]["op"] === TRUE)
 		{
-			$playerlist = $playerlist."<a class=\"op\" href=\"javascript:popup('functions/get_player.php?player=".$name."','playerinfo','700','500')\">".$name."</a>";
+			$playerlist = $playerlist."<a id=\"op\" href=\"javascript:popup('functions/get_player.php?player=".$name."','playerinfo','700','500')\">".$name."</a>";
 		}
 		else
 		{

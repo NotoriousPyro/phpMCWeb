@@ -29,24 +29,28 @@ defined("___ACCESS") or header("HTTP/1.1 403 Forbidden");
 </head>
 
 <body onload="javascript:getcontent('pages/<?php echo $pagehandler->page ?>.phtml?act=<?php echo $pagehandler->act; ?>', 'page')">
-<div class="main">
-	<div class="main_topleft"></div>
-	<div id="players" class="main_topmiddle"></div>
-	<div id="basicinfo" class="main_topright"></div>
-	<div class="main_menu">
-		<div class="button" onclick="navigate('news.php')"><span>News</span></div>
-		<?php $pagehandler->GetButtons(); ?>
+<div class="container">
+	<div class="left">
+		<div id="players"></div>
 	</div>
-	<div class="main_content">
-		<div id="page" class="main_content_box"></div>
+	<div class="main">
+		<div id="logo"></div>
+		<div id="basicinfo"></div>
+		<div id="menu">
+			<div class="button" onclick="navigate('news.php')"><span>News</span></div>
+			<?php $pagehandler->GetButtons(); ?>
+		</div>
+		<div id="content">
+			<div id="page"></div>
+		</div>
 	</div>
+	<div class="version"><?php
+
+	// Please do not edit this line, if you wish to help develop phpMCWeb
+	// then please get in touch with me at craigcrawford1988 AT gmail DOT com
+	printf($phpmc["VERSION"].$phpmc["MAIN"]["LOADTIMER"], $loadtimer->GetLoadTime());
+
+	?></div>
 </div>
-<div class="version"><?php
-
-// Please do not edit this line, if you wish to help develop phpMCWeb
-// then please get in touch with me at craigcrawford1988 AT gmail DOT com
-printf($phpmc["VERSION"].$phpmc["MAIN"]["LOADTIMER"], $loadtimer->GetLoadTime());
-
-?></div>
 </body>
 </html>

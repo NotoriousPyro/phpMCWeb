@@ -21,7 +21,7 @@ require("../includes.php");
 
 $player = $_GET["player"];
 $url = "http://minecraft.net/skin/%s.png";
-$imageurl = vsprintf($url, $player);
+$imageurl = sprintf($url, $player);
 $savepath = "../cache/players/";
 $minupdate = 3600;
 
@@ -36,13 +36,15 @@ try
 		{
 			throw new Exception($phpmc["ERRORS"]["INJECT_CAUGHT"]);
 		}
-		if (substr(vsprintf("%o", fileperms($savepath)), -4) != "0777")
+		
+		if (substr(sprintf("%o", fileperms($savepath)), -4) != "0777")
 		{
 			if (!chmod($savepath, 0777))
 			{
 				throw new Exception($phpmc["ERRORS"]["PERMISSIONS"]);
 			}
 		}
+		
 		if (!file_exists($player_original) || time() - filemtime($player_original) > $minupdate)
 		{
 			$headers = get_headers($imageurl);
@@ -65,10 +67,7 @@ try
 		
 		if (!file_exists($player_generated) || time() - filemtime($player_generated) > $minupdate)
 		{
-			$width = 64;
-			$height = 124;
-			
-			$generated = imagecreatetruecolor($width, $height);
+			$generated = imagecreatetruecolor(64, 124);
 			
 			if (!$generated)
 			{
@@ -91,6 +90,7 @@ try
 			imagecopyresized($generated, $original, 0, 28, 44, 20, 16, 48, 4, 12);
 			imagecopyresized($generated, $original, 16, 28, 20, 20, 32, 48, 8, 12);
 			imagecopyresized($generated, $original, 16, 76, 4, 20, 16, 48, 4, 12);
+			imagedestroy($original);
 			imagecopy($generated, $generated, 48, 28, 12, 28, 4, 48);
 			imagecopy($generated, $generated, 52, 28, 8, 28, 4, 48);
 			imagecopy($generated, $generated, 56, 28, 4, 28, 4, 48);

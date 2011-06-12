@@ -21,6 +21,41 @@ body {
 	font-size: 14px;
 }
 
+img.status {
+	padding-top: 2px;
+}
+
+div.container {
+	width: 974px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+div.left {
+	background-image: url('left.png');
+	width: 162px;
+	height: 750px;
+	position: relative;
+	margin-left: 12px;
+	float: left;
+	color: #FFF;
+}
+
+div.left #players {
+	float: left;
+	width: 138px;
+	height: inherit;
+	margin-top: 12px;
+	margin-left: 12px;
+	overflow-y: auto;
+}
+
+div.left #players #op {
+	color: #C00;
+	font-weight: bold;
+}
+
 div.main {
 	background-image: url('main.png');
 	width: 800px;
@@ -33,7 +68,7 @@ div.main {
 	color: #FFF;
 }
 
-div.main_topleft {
+div.main #logo {
 	background-image: url('top.png');
 	width: 252px;
 	height: 66px;
@@ -42,18 +77,7 @@ div.main_topleft {
 	margin-top: 15px;
 }
 
-div.main_topmiddle {
-	float: left;
-	width: 292px;
-	margin-top: 15px;
-	margin-left: 15px;
-}
-
-div.main_topmiddle_top {
-	font-weight: bold;
-}
-
-div.main_topright {
+div.main #basicinfo {
 	width: 175px;
 	float: right;
 	margin-top: 15px;
@@ -74,16 +98,43 @@ div.main_topright_right {
 	float: left;
 }
 
-img.status {
-	padding-top: 2px;
-}
-
-div.main_menu {
+div.main #menu {
 	text-align: center;
 	height: 50px;
 	margin-top: 123px;
 	margin-left: 25px;
 	margin-right: 25px;
+}
+
+div.main #content {
+	background-image: url('content.png');
+	height: 579px;
+	width: 773px;
+	margin-left: 13px;
+	margin-bottom: 14px;
+	position: absolute;
+	bottom: 0;
+}
+
+div.main #content #page {
+	height: 560px;
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-right: 10px;
+	margin-bottom: 10px;
+}
+
+div.version {
+	width: 500px;
+	height: 50px;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+}
+
+div.version a {
+	color: #000;
+	font-weight: bold;
 }
 
 div.button {
@@ -103,55 +154,13 @@ div.button span {
 	display: block;
 	white-space: nowrap;
 }
+
 div.button:hover {
 	background:url('button_righthover.png') right no-repeat;
 }
+
 div.button:hover span {
 	background:url('button_lefthover.png') left no-repeat;
-}
-
-div.main_content {
-	background-image: url('content.png');
-	height: 579px;
-	width: 773px;
-	margin-left: 13px;
-	margin-bottom: 14px;
-	position: absolute;
-	bottom: 0;
-}
-
-div.main_content_box {
-	height: 560px;
-	margin-top: 10px;
-	margin-left: 10px;
-	margin-right: 10px;
-	margin-bottom: 10px;
-}
-
-div.version {
-	width: 500px;
-	height: 50px;
-	margin-right: auto;
-	margin-left: auto;
-	text-align: center;
-}
-
-table.login {
-	margin-left: auto;
-	margin-right: auto;
-	width: 400px;
-	border: 0;
-	padding: 5px 5px 5px 5px;
-}
-table.login td.login_left {
-	width: 156px;
-	text-align: right;
-}
-
-p.error {
-	color: #E00;
-	text-align: center;
-	font-weight: bold;
 }
 
 a:link {
@@ -172,14 +181,4 @@ a:visited {
 a:hover {
 	color: #E2E2E2;
 	text-decoration: underline;
-}
-
-a.op {
-	color: #C00;
-	font-weight: bold;
-}
-
-a.version {
-	color: #000;
-	font-weight: bold;
 }

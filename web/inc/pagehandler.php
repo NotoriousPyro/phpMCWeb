@@ -70,7 +70,7 @@ class PageHandler
 			}
 			else
 			{
-				echo "\t\t";
+				echo "\t\t\t";
 			}
 		}
 	}

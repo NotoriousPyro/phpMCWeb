@@ -39,7 +39,7 @@ table.news_comments {
 	margin-right: auto;
 }
 
-div.main_content_box_news {
+div.main #content #page {
 	height: 560px;
 	margin-top: 10px;
 	margin-left: 10px;

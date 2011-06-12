@@ -23,7 +23,7 @@ $theme = "default";
 $site_name = "phpMCWeb";
 
 // Full URL to phpMCWeb (e.g. http://www.somesite.com/phpmcweb)
-$site_url = "";
+$site_url = "http://";
 
 // JSONAPI settings
 $jsonapi_ip = "localhost";
@@ -34,6 +34,6 @@ $jsonapi_salt = "";
 
 // Full URL to Dynmap (ignore if you've deleted map.phtml from the pages directory)
 // (e.g. http://www.somesite.com/dynmap)
-$dynmap = "";
+$dynmap = "http://";
 
 ?>

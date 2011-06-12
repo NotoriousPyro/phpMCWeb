@@ -17,10 +17,10 @@
 
 defined("___ACCESS") or header("HTTP/1.1 403 Forbidden");
 
-$version = "0.8.1";
+$version = "0.8.5";
 
 // Please do not edit this line, if you wish to help develop phpMCWeb
 // then please get in touch with me at craigcrawford1988 AT gmail DOT com
-$phpmc["VERSION"] = nl2br(sprintf("<a class=\"version\" target=\"_blank\" href=\"http://forums.bukkit.org/threads/tool-web-info-phpmcweb.12642/\">phpMCWeb</a> %s by NotoriousPyro\n", $version));
+$phpmc["VERSION"] = nl2br(sprintf("<a target=\"_blank\" href=\"http://forums.bukkit.org/threads/12642/\">phpMCWeb</a> %s by NotoriousPyro\n", $version));
 
 ?>
